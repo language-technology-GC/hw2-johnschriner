@@ -1,0 +1,510 @@
+2021-10-22 17:33:36 | INFO | fairseq_cli.generate | Namespace(all_gather_list_size=16384, batch_size=None, batch_size_valid=None, beam=8, bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_shard_count=1, checkpoint_suffix='', constraints=None, cpu=False, criterion='cross_entropy', curriculum=0, data='data-bin', data_buffer_size=10, dataset_impl=None, ddp_backend='c10d', decoding_format=None, device_id=0, disable_validation=False, distributed_backend='nccl', distributed_init_method=None, distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=1, distributed_wrapper='DDP', diverse_beam_groups=-1, diverse_beam_strength=0.5, diversity_rate=-1.0, empty_cache_freq=0, eval_bleu=False, eval_bleu_args=None, eval_bleu_detok='space', eval_bleu_detok_args=None, eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, fix_batches_to_gpus=False, fixed_validation_seed=None, force_anneal=None, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, gen_subset='test', iter_decode_eos_penalty=0.0, iter_decode_force_max_iter=False, iter_decode_max_iter=10, iter_decode_with_beam=1, iter_decode_with_external_reranker=False, left_pad_source='True', left_pad_target='False', lenpen=1, lm_path=None, lm_weight=0.0, load_alignments=False, localsgd_frequency=3, log_format=None, log_interval=100, lr_scheduler='fixed', lr_shrink=0.1, match_source_len=False, max_len_a=0, max_len_b=200, max_source_positions=1024, max_target_positions=1024, max_tokens=12000, max_tokens_valid=None, memory_efficient_bf16=False, memory_efficient_fp16=False, min_len=1, min_loss_scale=0.0001, model_overrides='{}', model_parallel_size=1, nbest=1, no_beamable_mm=False, no_early_stop=False, no_progress_bar=False, no_repeat_ngram_size=0, no_seed_provided=False, nprocs_per_node=1, num_batch_buckets=0, num_shards=1, num_workers=1, optimizer=None, path='checkpoints/checkpoint_best.pt', pipeline_balance=None, pipeline_checkpoint='never', pipeline_chunks=0, pipeline_decoder_balance=None, pipeline_decoder_devices=None, pipeline_devices=None, pipeline_encoder_balance=None, pipeline_encoder_devices=None, pipeline_model_parallel=False, prefix_size=0, print_alignment=False, print_step=False, profile=False, quantization_config_path=None, quiet=False, remove_bpe=None, replace_unk=None, required_batch_size_multiple=8, required_seq_len_multiple=1, results_path=None, retain_dropout=False, retain_dropout_modules=None, retain_iter_history=False, sacrebleu=False, sampling=False, sampling_topk=-1, sampling_topp=-1.0, score_reference=False, scoring='bleu', seed=1, shard_id=0, skip_invalid_size_inputs_valid_test=False, slowmo_algorithm='LocalSGD', slowmo_momentum=None, source_lang='ice.g', target_lang='ice.p', task='translation', temperature=1.0, tensorboard_logdir=None, threshold_loss_scale=None, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, unkpen=0, unnormalized=False, upsample_primary=1, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, warmup_updates=0, zero_sharding='none')
+2021-10-22 17:33:36 | INFO | fairseq.tasks.translation | [ice.g] dictionary: 40 types
+2021-10-22 17:33:36 | INFO | fairseq.tasks.translation | [ice.p] dictionary: 64 types
+2021-10-22 17:33:36 | INFO | fairseq.data.data_utils | loaded 100 examples from: data-bin/test.ice.g-ice.p.ice.g
+2021-10-22 17:33:36 | INFO | fairseq.data.data_utils | loaded 100 examples from: data-bin/test.ice.g-ice.p.ice.p
+2021-10-22 17:33:36 | INFO | fairseq.tasks.translation | data-bin test ice.g-ice.p 100 examples
+2021-10-22 17:33:36 | INFO | fairseq_cli.generate | loading model(s) from checkpoints/checkpoint_best.pt
+S-4	b o r g a r s t j ó r i
+T-4	p ɔ r k a r s t j o uː r ɪ
+H-4	-3.402451515197754	s a a a a a a a r ʏ ɪ
+D-4	-3.402451515197754	s a a a a a a a r ʏ ɪ
+P-4	-2.9087 -2.8508 -3.6330 -3.5623 -3.3651 -3.4332 -3.6469 -3.9602 -3.9913 -3.6734 -3.4116 -2.3929
+S-34	g r e i n a r g e r ð
+T-34	k r e iː n a r c ɛ r ð
+H-34	-3.4345719814300537	s a a a a a a r ʏ r
+D-34	-3.4345719814300537	s a a a a a a r ʏ r
+P-34	-2.9245 -2.8130 -3.5993 -3.5420 -3.3809 -3.4875 -3.7385 -4.0291 -3.8622 -3.5350 -2.8683
+S-26	f y r i r l e s t u r
+T-26	f ɪː r ɪ r l ɛ s t ʏ r
+H-26	-3.4345719814300537	s a a a a a a r ʏ r
+D-26	-3.4345719814300537	s a a a a a a r ʏ r
+P-26	-2.9245 -2.8130 -3.5993 -3.5420 -3.3809 -3.4875 -3.7385 -4.0291 -3.8622 -3.5350 -2.8683
+S-67	s a m k o m u l a g
+T-67	s a m kʰ ɔː m ʏ l aː ɣ
+H-67	-3.310138702392578	s a a a a a a r r a
+D-67	-3.310138702392578	s a a a a a a r r a
+P-67	-2.9351 -2.7743 -3.5669 -3.5341 -3.4216 -3.5721 -3.8796 -3.9722 -3.6478 -3.3195 -1.7881
+S-3	b a n d a r í k i n
+T-3	p a n t a r iː c ɪ n
+H-3	-3.3101391792297363	s a a a a a a r r a
+D-3	-3.3101391792297363	s a a a a a a r r a
+P-3	-2.9351 -2.7743 -3.5669 -3.5341 -3.4216 -3.5721 -3.8796 -3.9722 -3.6478 -3.3195 -1.7881
+S-1	a u s t u r r í k i
+T-1	ø y s t ʏ r r iː c ɪ
+H-1	-3.310138702392578	s a a a a a a r r a
+D-1	-3.310138702392578	s a a a a a a r r a
+P-1	-2.9351 -2.7743 -3.5669 -3.5341 -3.4216 -3.5721 -3.8796 -3.9722 -3.6478 -3.3195 -1.7881
+S-83	t i l f i n n i n g
+T-83	tʰ ɪ l f ɪ nː i ŋ k
+H-83	-3.3101391792297363	s a a a a a a r r a
+D-83	-3.3101391792297363	s a a a a a a r r a
+P-83	-2.9351 -2.7743 -3.5669 -3.5341 -3.4216 -3.5721 -3.8796 -3.9722 -3.6478 -3.3195 -1.7881
+S-68	s a n n a r l e g a
+T-68	s a nː a r l ɛː ɣ a
+H-68	-3.3101391792297363	s a a a a a a r r a
+D-68	-3.3101391792297363	s a a a a a a r r a
+P-68	-2.9351 -2.7743 -3.5669 -3.5341 -3.4216 -3.5721 -3.8796 -3.9722 -3.6478 -3.3195 -1.7881
+S-80	s é r s t a k u r
+T-80	s j ɛ r̥ s t aː k ʏ r
+H-80	-3.2647886276245117	s a a a a a a a a
+D-80	-3.2647886276245117	s a a a a a a a a
+P-80	-2.9291 -2.7368 -3.5447 -3.5519 -3.5016 -3.7131 -3.9601 -3.6634 -3.1913 -1.8560
+S-74	s p e n n a n d i
+T-74	s p ɛ nː a n t ɪ
+H-74	-3.2647886276245117	s a a a a a a a a
+D-74	-3.2647886276245117	s a a a a a a a a
+P-74	-2.9291 -2.7368 -3.5447 -3.5519 -3.5016 -3.7131 -3.9601 -3.6634 -3.1913 -1.8560
+S-52	l e i k f é l a g
+T-52	l e iː k f j ɛː l aː ɣ
+H-52	-3.2647886276245117	s a a a a a a a a
+D-52	-3.2647886276245117	s a a a a a a a a
+P-52	-2.9291 -2.7368 -3.5447 -3.5519 -3.5016 -3.7131 -3.9601 -3.6634 -3.1913 -1.8560
+S-62	m y n d a v é l
+T-62	m ɪ n t a v j ɛː l
+H-62	-3.17877459526062	s a a a a a a a
+D-62	-3.17877459526062	s a a a a a a a
+P-62	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-22	f i n n l a n d
+T-22	f ɪ nː l a n t
+H-22	-3.17877459526062	s a a a a a a a
+D-22	-3.17877459526062	s a a a a a a a
+P-22	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-19	e ð l i l e g a
+T-19	ɛ ð l ɪ l ɛː ɣ a
+H-19	-3.178774356842041	s a a a a a a a
+D-19	-3.178774356842041	s a a a a a a a
+P-19	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-25	f u l l t r ú i
+T-25	f ʏ t l̥ tʰ r uː ɪ
+H-25	-3.17877459526062	s a a a a a a a
+D-25	-3.17877459526062	s a a a a a a a
+P-25	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-30	g a g n r ý n i
+T-30	k a k n r iː n ɪ
+H-30	-3.178774356842041	s a a a a a a a
+D-30	-3.178774356842041	s a a a a a a a
+P-30	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-60	m e ð l i m u r
+T-60	m ɛ ð l ɪː m ʏ r
+H-60	-3.17877459526062	s a a a a a a a
+D-60	-3.17877459526062	s a a a a a a a
+P-60	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-85	t y r k l a n d
+T-85	t ɪ r̥ k l a n t
+H-85	-3.17877459526062	s a a a a a a a
+D-85	-3.17877459526062	s a a a a a a a
+P-85	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-93	ö k u m a ð u r
+T-93	œː k ʏ m aː ð ʏ r
+H-93	-3.17877459526062	s a a a a a a a
+D-93	-3.17877459526062	s a a a a a a a
+P-93	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-5	b r a s i l í a
+T-5	p r aː s ɪ l iː j a
+H-5	-3.178773880004883	s a a a a a a a
+D-5	-3.178773880004883	s a a a a a a a
+P-5	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-21	f a n g e l s i
+T-21	f a u ŋ c ɛ l s ɪ
+H-21	-3.178774356842041	s a a a a a a a
+D-21	-3.178774356842041	s a a a a a a a
+P-21	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-54	l á t b r a g ð
+T-54	l a uː t p r a ɣ ð
+H-54	-3.178774356842041	s a a a a a a a
+D-54	-3.178774356842041	s a a a a a a a
+P-54	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-89	v e r ð m æ t i
+T-89	v ɛ r ð m a iː t ɪ
+H-89	-3.17877459526062	s a a a a a a a
+D-89	-3.17877459526062	s a a a a a a a
+P-89	-2.8840 -2.7097 -3.5564 -3.6224 -3.6530 -3.8338 -3.5705 -3.0250 -1.7541
+S-72	s l á t t u r
+T-72	s t l a u h t ʏ r
+H-72	-3.0307724475860596	s a a a a a a
+D-72	-3.0307724475860596	s a a a a a a
+P-72	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-47	k e n n a r i
+T-47	cʰ ɛ nː aː r ɪ
+H-47	-3.0307724475860596	s a a a a a a
+D-47	-3.0307724475860596	s a a a a a a
+P-47	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-66	s a m b a n d
+T-66	s a m p a n t
+H-66	-3.0307729244232178	s a a a a a a
+D-66	-3.0307729244232178	s a a a a a a
+P-66	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-84	t r e y s t a
+T-84	tʰ r e i s t a
+H-84	-3.0307724475860596	s a a a a a a
+D-84	-3.0307724475860596	s a a a a a a
+P-84	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-57	l ý ð r æ ð i
+T-57	l i ð r a iː ð ɪ
+H-57	-3.0307724475860596	s a a a a a a
+D-57	-3.0307724475860596	s a a a a a a
+P-57	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-77	s t j ó r n a
+T-77	s t j o u r t n a
+H-77	-3.0307724475860596	s a a a a a a
+D-77	-3.0307724475860596	s a a a a a a
+P-77	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-24	f o r d æ m i
+T-24	f ɔ r t a iː m ɪ
+H-24	-3.0307729244232178	s a a a a a a
+D-24	-3.0307729244232178	s a a a a a a
+P-24	-2.7788 -2.7281 -3.6662 -3.7999 -3.7623 -3.3549 -2.7725 -1.3835
+S-31	g a r ð a r
+T-31	k a r ð a r
+H-31	-2.823302984237671	s a a t a a
+D-31	-2.823302984237671	s a a t a a
+P-31	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-7	b y g g j a
+T-7	p ɪ cː a
+H-7	-2.823302984237671	s a a t a a
+D-7	-2.823302984237671	s a a t a a
+P-7	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-61	m i n n k a
+T-61	m i <<unk>> k a
+H-61	-2.82330322265625	s a a t a a
+D-61	-2.82330322265625	s a a t a a
+P-61	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-15	e i n i n g
+T-15	e iː n i ŋ k
+H-15	-2.823302984237671	s a a t a a
+D-15	-2.823302984237671	s a a t a a
+P-15	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-18	e r i n d i
+T-18	ɛː r ɪ n t ɪ
+H-18	-2.823302984237671	s a a t a a
+D-18	-2.823302984237671	s a a t a a
+P-18	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-44	h ö r ð u r
+T-44	h œ r ð ʏ r
+H-44	-2.823302984237671	s a a t a a
+D-44	-2.823302984237671	s a a t a a
+P-44	-2.6706 -2.8720 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-56	l ý s i n g
+T-56	l iː s i ŋ k
+H-56	-2.82330322265625	s a a t a a
+D-56	-2.82330322265625	s a a t a a
+P-56	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-63	p i l t u r
+T-63	pʰ ɪ l̥ t ʏ r
+H-63	-2.82330322265625	s a a t a a
+D-63	-2.82330322265625	s a a t a a
+P-63	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-98	þ r i ð j i
+T-98	θ r ɪ ð j ɪ
+H-98	-2.82330322265625	s a a t a a
+D-98	-2.82330322265625	s a a t a a
+P-98	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-23	f j ó r ð i
+T-23	f j o u r ð ɪ
+H-23	-2.823302984237671	s a a t a a
+D-23	-2.823302984237671	s a a t a a
+P-23	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-40	h á m a r k
+T-40	h a uː m a r̥ k
+H-40	-2.82330322265625	s a a t a a
+D-40	-2.82330322265625	s a a t a a
+P-40	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-76	s t j ó r n
+T-76	s t j o u r t n
+H-76	-2.823302984237671	s a a t a a
+D-76	-2.823302984237671	s a a t a a
+P-76	-2.6706 -2.8721 -3.9649 -3.7159 -3.1165 -2.4953 -0.9279
+S-70	s i t j a
+T-70	s ɪː t j a
+H-70	-2.600912094116211	s a iː a a
+D-70	-2.600912094116211	s a iː a a
+P-70	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-79	s v æ ð i
+T-79	s v a iː ð ɪ
+H-79	-2.600912094116211	s a iː a a
+D-79	-2.600912094116211	s a iː a a
+P-79	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-41	h æ g u r
+T-41	h a iː ɣ ʏ r
+H-41	-2.600912094116211	s a iː a a
+D-41	-2.600912094116211	s a iː a a
+P-41	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-36	g ó ð u r
+T-36	k o uː ð ʏ r
+H-36	-2.600912094116211	s a iː a a
+D-36	-2.600912094116211	s a iː a a
+P-36	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-6	b r á t t
+T-6	p r a u h t
+H-6	-2.600912094116211	s a iː a a
+D-6	-2.600912094116211	s a iː a a
+P-6	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-78	s v i ð i
+T-78	s v ɪː ð ɪ
+H-78	-2.600912094116211	s a iː a a
+D-78	-2.600912094116211	s a iː a a
+P-78	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-75	s t a f a
+T-75	s t aː v a
+H-75	-2.600912094116211	s a iː a a
+D-75	-2.600912094116211	s a iː a a
+P-75	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-71	s k o r a
+T-71	s k ɔː r a
+H-71	-2.600912094116211	s a iː a a
+D-71	-2.600912094116211	s a iː a a
+P-71	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-64	s a f n a
+T-64	s a p n a
+H-64	-2.600912094116211	s a iː a a
+D-64	-2.600912094116211	s a iː a a
+P-64	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-8	b y g g ð
+T-8	p ɪ ɣ ð
+H-8	-2.600912094116211	s a iː a a
+D-8	-2.600912094116211	s a iː a a
+P-8	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-50	k y n n a
+T-50	cʰ ɪ nː a
+H-50	-2.600912094116211	s a iː a a
+D-50	-2.600912094116211	s a iː a a
+P-50	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-58	m a n n a
+T-58	m a nː a
+H-58	-2.600912094116211	s a iː a a
+D-58	-2.600912094116211	s a iː a a
+P-58	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-59	m a n n i
+T-59	m a nː ɪ
+H-59	-2.600912094116211	s a iː a a
+D-59	-2.600912094116211	s a iː a a
+P-59	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-11	d r a g a
+T-11	t r aː ɣ a
+H-11	-2.600912094116211	s a iː a a
+D-11	-2.600912094116211	s a iː a a
+P-11	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-12	d r e i f
+T-12	t r e iː v
+H-12	-2.600912094116211	s a iː a a
+D-12	-2.600912094116211	s a iː a a
+P-12	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-20	f a l l a
+T-20	f a t l a
+H-20	-2.600912094116211	s a iː a a
+D-20	-2.600912094116211	s a iː a a
+P-20	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-33	g e r ð i
+T-33	c ɛ r ð ɪ
+H-33	-2.600912094116211	s a iː a a
+D-33	-2.600912094116211	s a iː a a
+P-33	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-37	h a l l a
+T-37	h a t l a
+H-37	-2.6009116172790527	s a iː a a
+D-37	-2.6009116172790527	s a iː a a
+P-37	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-39	h r ó p a
+T-39	r̥ o uː p a
+H-39	-2.600912094116211	s a iː a a
+D-39	-2.600912094116211	s a iː a a
+P-39	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-51	l e i k a
+T-51	l e iː k a
+H-51	-2.600912094116211	s a iː a a
+D-51	-2.600912094116211	s a iː a a
+P-51	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-17	e l s k a
+T-17	ɛ l s k a
+H-17	-2.600912094116211	s a iː a a
+D-17	-2.600912094116211	s a iː a a
+P-17	-2.7352 -3.1749 -3.5845 -3.1145 -2.3035 -0.6928
+S-73	s o f a
+T-73	s ɔː v a
+H-73	-2.6127870082855225	s a a a
+D-73	-2.6127870082855225	s a a a
+P-73	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-65	s a l a
+T-65	s aː l a
+H-65	-2.6127870082855225	s a a a
+D-65	-2.6127870082855225	s a a a
+P-65	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-53	l e i r
+T-53	l e iː r
+H-53	-2.6127874851226807	s a a a
+D-53	-2.6127874851226807	s a a a
+P-53	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-49	k v a ð
+T-49	kʰ v aː ð
+H-49	-2.6127870082855225	s a a a
+D-49	-2.6127870082855225	s a a a
+P-49	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-48	k o m a
+T-48	kʰ ɔː m a
+H-48	-2.6127874851226807	s a a a
+D-48	-2.6127874851226807	s a a a
+P-48	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-43	h ö l l
+T-43	h œ t l
+H-43	-2.6127870082855225	s a a a
+D-43	-2.6127870082855225	s a a a
+P-43	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-38	h e r a
+T-38	h ɛː r a
+H-38	-2.6127874851226807	s a a a
+D-38	-2.6127874851226807	s a a a
+P-38	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-16	e l l a
+T-16	ɛ t l a
+H-16	-2.6127870082855225	s a a a
+D-16	-2.6127870082855225	s a a a
+P-16	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-2	a u ð n
+T-2	ø y ð n
+H-2	-2.6127870082855225	s a a a
+D-2	-2.6127870082855225	s a a a
+P-2	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-97	þ e s s
+T-97	θ ɛ sː
+H-97	-2.6127870082855225	s a a a
+D-97	-2.6127870082855225	s a a a
+P-97	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-13	d ö g g
+T-13	t œ <<unk>>
+H-13	-2.6127870082855225	s a a a
+D-13	-2.6127870082855225	s a a a
+P-13	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-0	a l l s
+T-0	a l s
+H-0	-2.6127874851226807	s a a a
+D-0	-2.6127874851226807	s a a a
+P-0	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-81	s í r a
+T-81	s iː r a
+H-81	-2.6127874851226807	s a a a
+D-81	-2.6127874851226807	s a a a
+P-81	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-86	v a ð a
+T-86	v aː ð a
+H-86	-2.6127870082855225	s a a a
+D-86	-2.6127870082855225	s a a a
+P-86	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-92	ó t t i
+T-92	o u h t ɪ
+H-92	-2.6127874851226807	s a a a
+D-92	-2.6127874851226807	s a a a
+P-92	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-29	f æ r i
+T-29	f a iː r ɪ
+H-29	-2.6127870082855225	s a a a
+D-29	-2.6127870082855225	s a a a
+P-29	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-28	f æ r a
+T-28	f a iː r a
+H-28	-2.6127874851226807	s a a a
+D-28	-2.6127874851226807	s a a a
+P-28	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-10	b ó k a
+T-10	p o uː k a
+H-10	-2.6127870082855225	s a a a
+D-10	-2.6127870082855225	s a a a
+P-10	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-9	b æ t a
+T-9	p a iː t a
+H-9	-2.6127870082855225	s a a a
+D-9	-2.6127870082855225	s a a a
+P-9	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-99	þ ö r f
+T-99	θ œ r v
+H-99	-2.6127870082855225	s a a a
+D-99	-2.6127870082855225	s a a a
+P-99	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-96	þ e m a
+T-96	θ ɛː m a
+H-96	-2.6127865314483643	s a a a
+D-96	-2.6127865314483643	s a a a
+P-96	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-90	v í s t
+T-90	v i s t
+H-90	-2.6127874851226807	s a a a
+D-90	-2.6127874851226807	s a a a
+P-90	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-88	v e r k
+T-88	v ɛ r̥ k
+H-88	-2.6127870082855225	s a a a
+D-88	-2.6127870082855225	s a a a
+P-88	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-87	v e r a
+T-87	v ɛː r a
+H-87	-2.6127870082855225	s a a a
+D-87	-2.6127870082855225	s a a a
+P-87	-3.0919 -3.4152 -3.5092 -2.3184 -0.7291
+S-32	g a s
+T-32	k aː s
+H-32	-2.727295398712158	s a a
+D-32	-2.727295398712158	s a a
+P-32	-3.7364 -3.3420 -2.7856 -1.0452
+S-42	h é r
+T-42	ç ɛː r
+H-42	-2.727295398712158	s a a
+D-42	-2.727295398712158	s a a
+P-42	-3.7364 -3.3420 -2.7856 -1.0452
+S-45	h ú s
+T-45	h uː s
+H-45	-2.7272956371307373	s a a
+D-45	-2.7272956371307373	s a a
+P-45	-3.7364 -3.3420 -2.7856 -1.0452
+S-69	s i g
+T-69	s ɪː ɣ
+H-69	-2.727295398712158	s a a
+D-69	-2.727295398712158	s a a
+P-69	-3.7364 -3.3420 -2.7856 -1.0452
+S-94	ú t i
+T-94	uː t ɪ
+H-94	-2.727295398712158	s a a
+D-94	-2.727295398712158	s a a
+P-94	-3.7364 -3.3420 -2.7856 -1.0452
+S-95	ý s a
+T-95	iː s a
+H-95	-2.727295398712158	s a a
+D-95	-2.727295398712158	s a a
+P-95	-3.7364 -3.3420 -2.7856 -1.0452
+S-27	f æ r
+T-27	f a iː r
+H-27	-2.727295398712158	s a a
+D-27	-2.727295398712158	s a a
+P-27	-3.7364 -3.3420 -2.7856 -1.0452
+S-35	g u ð
+T-35	k v ʏː ð
+H-35	-2.727295398712158	s a a
+D-35	-2.727295398712158	s a a
+P-35	-3.7364 -3.3420 -2.7856 -1.0452
+S-46	j ó l
+T-46	j o uː l
+H-46	-2.727295160293579	s a a
+D-46	-2.727295160293579	s a a
+P-46	-3.7364 -3.3420 -2.7856 -1.0452
+S-55	l ó ð
+T-55	l o uː ð
+H-55	-2.727295398712158	s a a
+D-55	-2.727295398712158	s a a
+P-55	-3.7364 -3.3420 -2.7856 -1.0452
+S-82	s ó l
+T-82	s o uː l
+H-82	-2.727295160293579	s a a
+D-82	-2.727295160293579	s a a
+P-82	-3.7364 -3.3420 -2.7856 -1.0452
+S-91	á r a
+T-91	a uː r a
+H-91	-2.7272956371307373	s a a
+D-91	-2.7272956371307373	s a a
+P-91	-3.7364 -3.3420 -2.7856 -1.0452
+S-14	e f
+T-14	ɛː v
+H-14	-2.878249168395996	v a
+D-14	-2.878249168395996	v a
+P-14	-3.8902 -3.0671 -1.6775
+2021-10-22 17:33:52 | INFO | fairseq_cli.generate | NOTE: hypothesis and token scores are output in base 2
+2021-10-22 17:33:52 | INFO | fairseq_cli.generate | Translated 100 sentences (664 tokens) in 7.6s (13.14 sentences/s, 87.22 tokens/s)
+Generate test with beam=8: BLEU4 = 0.00, 21.8/2.8/0.0/0.0 (BP=0.963, ratio=0.964, syslen=564, reflen=585)
